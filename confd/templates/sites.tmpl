@@ -1,0 +1,7 @@
+{{range $dir := lsdir "/webs"}}
+    {{$subdomain := printf "/webs/%s/subdomain" $dir}}
+    CLOUDFLARE_SUBDOMAIN={{ getv $subdomain }} \
+    {{$rootdomain := printf "/webs/%s/rootdomain" $dir}}
+    CLOUDFLARE_ROOT_DOMAIN={{ getv $rootdomain }} \
+    cloudflare_register
+{{end}}

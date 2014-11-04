@@ -1,0 +1,7 @@
+[template]
+src = "sites.tmpl"
+dest = "/tmp/sites"
+keys = [
+	"/webs"
+]
+reload_cmd = "/bin/bash /tmp/sites"
